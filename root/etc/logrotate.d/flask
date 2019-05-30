@@ -1,0 +1,9 @@
+/var/www/flask/log/*.log {
+        rotate 7
+        weekly
+        missingok
+        notifempty
+        delaycompress
+        compress
+        su www-data www-data
+}

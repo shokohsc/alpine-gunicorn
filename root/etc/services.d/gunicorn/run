@@ -1,0 +1,3 @@
+#!/usr/bin/with-contenv bash
+
+exec /usr/bin/gunicorn --config /etc/gunicorn/conf.d/gunicorn.ini app:app

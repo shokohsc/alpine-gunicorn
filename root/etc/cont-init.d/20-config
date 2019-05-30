@@ -1,0 +1,12 @@
+#!/usr/bin/with-contenv bash
+
+mkdir -p /etc/gunicorn/conf.d
+
+[[ ! -f /etc/gunicorn/conf.d/gunicorn.ini ]] && \
+    echo "overwrite /etc/gunicorn/conf.d/gunicorn.ini" && \
+	cp /defaults/gunicorn.ini /etc/gunicorn/conf.d/gunicorn.ini
+
+# permissions
+chmod -R g+w /etc/gunicorn
+
+chmod -R 644 /etc/logrotate.d
