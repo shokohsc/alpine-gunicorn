@@ -1,4 +1,4 @@
-FROM shokohsc/python-s6
+FROM shokohsc/alpine-python
 
 # install packages
 RUN \
