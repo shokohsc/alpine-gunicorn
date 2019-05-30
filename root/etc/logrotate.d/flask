@@ -1,9 +1,0 @@
-/var/www/flask/log/*.log {
-        rotate 7
-        weekly
-        missingok
-        notifempty
-        delaycompress
-        compress
-        su app app
-}

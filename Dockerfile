@@ -1,16 +1,9 @@
-FROM shokohsc/alpine-s6
-
-ENV WORKDIR "/var/www/flask"
+FROM shokohsc/python-s6
 
 # install packages
 RUN \
  echo "**** install build packages ****" && \
  apk add --no-cache \
-    git \
-    libressl2.7-libssl \
-    logrotate \
-    openssl \
-    python3 \
     inotify-tools \
     py3-gunicorn && \
  echo "**** fix logrotate ****" && \
@@ -21,6 +14,3 @@ ADD root/ /
 
 # ports and volumes
 EXPOSE 80
-VOLUME /var/www/flask
-
-WORKDIR ${WORKDIR}
