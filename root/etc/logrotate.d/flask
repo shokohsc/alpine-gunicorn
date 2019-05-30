@@ -5,5 +5,5 @@
         notifempty
         delaycompress
         compress
-        su www-data www-data
+        su app app
 }
