@@ -7,6 +7,8 @@ mkdir -p /etc/gunicorn/conf.d
 	cp /defaults/gunicorn.ini /etc/gunicorn/conf.d/gunicorn.ini
 
 # permissions
+chown -R app:app /etc/gunicorn
+
 chmod -R g+w /etc/gunicorn
 
 chmod -R 644 /etc/logrotate.d
