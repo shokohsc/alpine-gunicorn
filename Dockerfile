@@ -1,4 +1,5 @@
-FROM shokohsc/alpine-python
+ARG FROM_TAG='latest'
+FROM shokohsc/alpine-s6:${FROM_TAG:-latest}
 
 # install packages
 RUN \
